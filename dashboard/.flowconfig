@@ -1,0 +1,20 @@
+[version]
+0.82.0
+
+[include]
+../vendor/github.com/sensu/sensu-go/dashboard/lib
+
+[lints]
+all=error
+
+[libs]
+flow-typed
+
+[options]
+emoji=true
+include_warnings=true
+suppress_comment=\\(.\\|\n\\)*\\$ExpectError
+module.ignore_non_literal_requires=true
+
+module.name_mapper='^\($\|/.*$\)' -> '<PROJECT_ROOT>/src\1'
+module.name_mapper='^@sensu/lib\($\|/.*$\)' -> '<PROJECT_ROOT>/../vendor/github.com/sensu/sensu-go/dashboard/lib\1'
